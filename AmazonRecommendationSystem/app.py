@@ -45,5 +45,5 @@ if prompt:
         st.write(f"**Rating:** {row['rating']}")
         st.write(f"**Review Sentiment:** {row['review_sentiment']}")
         st.write(f"**Review Summary:** {row['review_summary']}")
-        st.write(f"**Product Link (India):** [Link]({row['product_link']})")
+        st.write(f"**Product Link :** [Link]({row['product_link']})")
         st.write("---")

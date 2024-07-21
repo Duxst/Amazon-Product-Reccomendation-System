@@ -32,6 +32,10 @@ try:
 
     # Function to summarize reviews
     def summarize_review(review):
+        # Truncate reviews longer than the model's maximum input length
+        max_input_length = 1024
+        if len(review) > max_input_length:
+            review = review[:max_input_length]
         # Summarize the review
         try:
             summary = summarizer(review, max_length=50, min_length=25, do_sample=False)
@@ -64,4 +68,3 @@ try:
 
 except Exception as e:
     print(f"An error occurred: {e}")
-
